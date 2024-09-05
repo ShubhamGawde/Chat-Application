@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <title>Let's Chat Login </title>
+    <link href="https://fonts.googleapis.com/css?family=Heebo:400,700|IBM+Plex+Sans:600" rel="stylesheet">
+    <link href="css/style2.css" rel="stylesheet">
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal@4.0.0/dist/scrollreveal.min.js"></script>
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="js/emojionearea.min.js"></script>
+</head>
+<body class="is-boxed has-animations">
+<div class="loader" id="loader"></div>
+<div class="body-wrap boxed-container">
+    <header class="site-header">
+        <div class="container">
+            <div class="site-header-inner">
+                <div class="brand header-brand">
+                    <h1 class="m-0">
+                        <a href="#">
+                            <img alt="Logo" class="header-logo-image asset-light" src="images/logo-light.svg">
+                            <img alt="Logo" class="header-logo-image asset-dark" src="images/logo-dark.svg">
+                        </a>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-inner">
+                    <div class="hero-copy">
+                        <h1 class="hero-title mt-0">Let's Chat</h1>
+                        <p class="hero-paragraph">"Connect, Share, and Chat Effortlessly With Your Loved Ones
+                            <span style="color: #ff0000;">&#10084;</span> "</p>
+
+                        <div class="hero-cta">
+                            <div class="form-group mx-sm-3 mb-2">
+                                <input class="form-control" id="name" placeholder="Enter Name" type="text">
+                            </div>
+                            <button class="btn btn-primary mb-2" id="submit-btn">Enter</button>
+                            <!--                            <div class="lights-toggle">-->
+                            <!--                                <input id="lights-toggle" type="checkbox" name="lights-toggle" class="switch"-->
+                            <!--                                       checked="checked">-->
+                            <!--                                <label for="lights-toggle" class="text-xs"><span>Turn me <span-->
+                            <!--                                        class="label-text">dark</span></span></label>-->
+                            <!--                            </div>-->
+
+                        </div>
+                    </div>
+                    <div class="hero-media">
+                        <div class="header-illustration">
+                            <img alt="Header illustration"
+                                 class="header-illustration-image asset-light" src="images/header-illustration-light.svg">
+                            <img alt="Header illustration" class="header-illustration-image asset-dark"
+                                 src="images/header-illustration-dark.svg">
+                        </div>
+                        <div class="hero-media-illustration">
+                            <img alt="Hero media illustration"
+                                 class="hero-media-illustration-image asset-light" src="images/hero-media-illustration-light.svg">
+                            <img alt="Hero media illustration"
+                                 class="hero-media-illustration-image asset-dark" src="images/hero-media-illustration-dark.svg">
+                        </div>
+                        <div class="hero-media-container">
+                            <img alt="Hero media" class="hero-media-image asset-light" src="images/chatImg.avif">
+                            <img alt="Hero media" class="hero-media-image asset-dark" src="images/chatImg.avif">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<script src="js/main.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

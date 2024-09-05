@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Let's Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/emojionearea.min.css">
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.min.js"></script>
+    <script src="/webjars/stomp-websocket/stomp.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emoji-button@latest/dist/index.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/emojionearea.min.js"></script>
+</head>
+<body>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+    $("#content").emojioneArea({pickerPosition : "top"})
+        let storedData = localStorage.getItem('name');
+        if (!storedData) {
+            window.location.href = '/index.html';
+        } else {
+            console.log('Data found in local storage, you can proceed!');
+        }
+
+    });
+</script>
+
+
+<div class="page-content page-container" id="page-content">
+    <div class="padding">
+        <div class="row container d-flex  justify-content-center">
+            <div class="col-md-6">
+                <div class="card card-bordered">
+                    <div class="card-header">
+                        <img class="avatar avatar-xs"
+                             src="images/download.jfif" alt="...">
+                        <h3 class="card-title" style="font-weight: bold; font-size : 20px;">Let's Chat</h3>
+                        <a id="logout" data-abc="true">
+                            <img class="avatar avatar-xs" src="images/power-button.png" alt="..."></a>
+                    </div>
+
+
+                    <div class="ps-container ps-theme-default ps-active-y" id="chat-content"
+                         style="overflow-y: scroll !important; height:400px !important;">
+                        <!--                        <div class="media media-chat">-->
+                        <!--                            <img class="avatar" src="https://img.icons8.com/color/36/000000/administrator-male.png"-->
+                        <!--                                 alt="...">-->
+                        <!--                            <div class="media-body">-->
+                        <!--                                <p id="sent-msg">hello</p>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+                        <!--                        <div class="media media-chat media-chat-reverse">-->
+                        <!--                            <div class="media-body">-->
+                        <!--                                <p id="recived-msg"></p>-->
+                        <!--                            </div>-->
+                        <!--                        </div>-->
+
+                        <div class="ps-scrollbar-x-rail" style="left: 0px; bottom: 0px;">
+                            <div class="ps-scrollbar-x" tabindex="0" style="left: 0px; width: 0px;"></div>
+                        </div>
+                        <div class="ps-scrollbar-y-rail" style="top: 0px; height: 0px; right: 2px;">
+                            <div class="ps-scrollbar-y" tabindex="0" style="top: 0px; height: 2px;"></div>
+                        </div>
+                    </div>
+
+                    <div class="publisher bt-1 border-light">
+                        <img class="avatar avatar-xs"
+                             src="https://img.icons8.com/color/36/000000/administrator-male.png" alt="...">
+
+                        <input class="publisher-input" type="text" id="content" placeholder="Write something">
+
+                        <a class="publisher-btn " id="send">
+                            <i class="fa fa-paper-plane"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
